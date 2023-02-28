@@ -24,6 +24,8 @@ from .misc.memory_sql import async_memory_db, sync_memory_db
 from .misc.type import CrudMethods, SqlType
 from .misc.utils import convert_table_to_model, Base
 
+BaseModel.Config.arbitrary_types_allowed = True
+
 CRUDModelType = TypeVar("CRUDModelType", bound=BaseModel)
 CompulsoryQueryModelType = TypeVar("CompulsoryQueryModelType", bound=BaseModel)
 OnConflictModelType = TypeVar("OnConflictModelType", bound=BaseModel)
