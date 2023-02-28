@@ -26,6 +26,8 @@ from .type import \
 
 Base = TypeVar("Base", bound=declarative_base)
 
+BaseModel.Config.arbitrary_types_allowed = True
+
 BaseModelT = TypeVar('BaseModelT', bound=BaseModel)
 
 __all__ = [

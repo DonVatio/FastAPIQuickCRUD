@@ -9,6 +9,7 @@ from .exceptions import (RequestMissing,
                          InvalidRequestMethod)
 from .type import CrudMethods
 
+BaseModel.Config.arbitrary_types_allowed = True
 
 class RequestResponseModel(BaseModel):
     requestUrlParamModel: Optional[ModelMetaclass]

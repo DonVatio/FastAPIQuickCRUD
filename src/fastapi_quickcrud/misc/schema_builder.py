@@ -37,6 +37,8 @@ from .type import (MatchingPatternInStringBase,
                    ExtraFieldTypePrefix,
                    ExtraFieldType,
                    ItemComparisonOperators, PGSQLMatchingPatternInString, SqlType, )
+                   
+BaseModel.Config.arbitrary_types_allowed = True
 
 FOREIGN_PATH_PARAM_KEYWORD = "__pk__"
 BaseModelT = TypeVar('BaseModelT', bound=BaseModel)
@@ -46,6 +48,7 @@ TableNameT = NewType('TableNameT', str)
 ResponseModelT = NewType('ResponseModelT', BaseModel)
 ForeignKeyName = NewType('ForeignKeyName', str)
 TableInstance = NewType('TableInstance', Table)
+
 
 
 class ExcludeUnsetBaseModel(BaseModel):

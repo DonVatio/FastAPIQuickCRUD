@@ -8,7 +8,6 @@ from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import declarative_base, sessionmaker
 from sqlalchemy.pool import StaticPool
 
-
 class MemorySql():
     def __init__(self, async_mode: bool = False):
         """
